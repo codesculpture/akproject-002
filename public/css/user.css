@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    min-width: 100vh;
+    justify-content: center;
+    align-items: center;
+    
+}
+#uorh{
+    margin: 0;
+    padding: 0;
+   margin-left: 40%;
+}
+#uorh li{
+    
+    display: inline-block;
+    list-style: none;
+    
+    
+    
+}
+#uorh li a{
+    padding: 5px 20px;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+   position: relative;
+}
+#uorh li a.active{
+    
+    background-image: linear-gradient(120deg,#ecf0f1,#3498db);
+
+}
+
+#uorh li a::before{
+    content: '';
+    width: 60px;
+    position: relative;
+    background-color: black;
+    border-bottom: 8px solid #313131;
+    bottom: 0;
+    right:600px;
+    transition: 0.7s;
+}
+#uorh li a::after{
+    content: '';
+   display: block;
+   width: 0;
+   height: 2px;
+   background: #111111;
+   transition: width .3s;
+}
+#uorh li a:hover::after{
+    width: 100%;
+    transition: width .3s ;
+}
+
+
+
+#uul{
+    margin: 0;
+    padding: 0;
+    margin-left: 35%;
+    margin-top: 15px;
+}
+#uul li{
+    
+    display: inline-block;
+    list-style: none;
+    
+    
+}
+#uul li a:hover::after{
+    width: 100%;
+    transition: width .3s ;
+}
+#uul li a::before{
+    content: '';
+    width: 60px;
+    position: relative;
+    background-color: black;
+    border-bottom: 8px solid #313131;
+    bottom: 0;
+    right:400px;
+    transition: 0.7s;
+}
+#uul li a::after{
+    content: '';
+   display: block;
+   width: 0;
+   height: 2px;
+   background: #111111;
+   transition: width .3s;
+}
+
+#uul li a{
+    padding: 10px 25px;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+   position: relative;
+}
+#uul li a.active{
+    
+    background-image: linear-gradient(120deg,#e7f1ed,#43d66f);
+
+}
+
+
+#hul li a::before{
+    content: '';
+    width: 60px;
+    position: relative;
+    background-color: black;
+    border-bottom: 8px solid #313131;
+    bottom: 0;
+    right:400px;
+    transition: 0.7s;
+}
+#hul li a::after{
+    content: '';
+   display: block;
+   width: 0;
+   height: 2px;
+   background: #111111;
+   transition: width .3s;
+}
+#hul li a:hover::after{
+    width: 100%;
+    transition: width .3s ;
+}
+#hul{
+    margin: 0;
+    padding: 0;
+    margin-left: 490px;
+    margin-top: 15px;
+}
+#hul li{
+    
+    display: inline-block;
+    list-style: none;
+    
+    
+}
+#hul li a{
+    padding: 10px 25px;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+   position: relative;
+}
+#hul li a.active{
+    color: black;
+    background-image: linear-gradient(120deg,#e7f1ed,#43d66f);;
+
+}
+.table{
+    width: 80%;
+    left: 10%;
+    border: 2px solid #f1f1f1;
+    position: relative;
+    
+    margin:  25px ;
+    min-width: 400px;
+    
+}
+.table thead{
+    
+    background-image: linear-gradient(120deg,#ecf0f1,#3498db);
+}
+.table thead tr{
+    text-align: center;
+}
+.table tbody tr{
+    text-align: center;
+}
+.table tbody tr:hover{
+       background-color: #f1f1f1;
+       
+}
+
+.btn-crte{
+    width: 150px;
+    height: 45px;
+    color: #3498db;
+      border: 2.5px solid;
+      background: none;
+      text-transform: uppercase;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 600;
+      position: relative;
+}
+.btn-crte::before,.btn-crte::after{
+     content: '';
+     position: absolute;
+     width: 14px;
+     height: 4px;
+     background: white;
+     transform: skewX(50deg);
+     transition: .4s linear;
+}
+.btn-crte::before{
+    top: -4px;
+    left: 10%;
+
+
+}
+.btn-crte::after{
+    bottom: -4px;
+    right: 10%;
+}
+.btn-crte:hover::before{
+    left: 80%;
+}
+.btn-crte:hover::after{
+    right: 80%;
+}
+
+
+
+
+.btn-log{
+    margin-left: 1272px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    width: 70px;
+    height: 30px;
+    color: gray;
+      border: 1.5px solid;
+      background: none;
+      text-transform: uppercase;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 12px;
+      position: relative;
+}
+.btn-log::before,.btn-log::after{
+     content: '';
+     position: absolute;
+     width: 14px;
+     height: 4px;
+     background: white;
+     transform: skewX(50deg);
+     transition: .4s linear;
+}
+.btn-log::before{
+    top: -4px;
+    left: 10%;
+
+
+}
+.btn-log::after{
+    bottom: -4px;
+    right: 10%;
+}
+.btn-log:hover::before{
+    left: 80%;
+}
+.btn-log:hover::after{
+    right: 80%;
+}
+
+
+#show-email{
+    font-size: 15px;
+    color: rgb(145, 103, 103);
+    font-weight: 900;
+    
+}
+
+.sinas{
+    margin-top: -2.5%;
+    margin-left: 0.5%;
+    color: gray;
+}
+
+
+
+
+.btn-joinow{
+   
+    width: 85px;
+    height: 35px;
+    color: #3498db;
+      border: 2px solid;
+      background: none;
+      font-size: 12px;
+      text-transform: uppercase;
+      cursor: pointer;
+      font-weight: 500;
+      position: relative;
+}
+.btn-joinow::before,.btn-joinow::after{
+     content: '';
+     position: absolute;
+     width: 10px;
+     height: 4px;
+     background: white;
+     transform: skewX(50deg);
+     transition: .4s linear;
+}
+.btn-joinow::before{
+    top: -4px;
+    left: 10%;
+
+
+}
+.btn-joinow::after{
+    bottom: -4px;
+    right: 10%;
+}
+.btn-joinow:hover::before{
+    left: 80%;
+}
+.btn-joinow:hover::after{
+    right: 80%;
+}
+
+
+
+
+
+
+
+
+
+.btn-startnow{
+   
+    width: 95px;
+    height: 33px;
+    color: #3498db;
+      border: 2px solid;
+      background: none;
+      text-transform: uppercase;
+      font-size: 12px;
+      cursor: pointer;
+      font-weight: 600;
+      position: relative;
+}
+.btn-startnow::before,.btn-startnow::after{
+     content: '';
+     position: absolute;
+     width: 14px;
+     height: 4px;
+     background: white;
+     transform: skewX(50deg);
+     transition: .4s linear;
+}
+.btn-startnow::before{
+    top: -4px;
+    left: 10%;
+
+
+}
+.btn-startnow::after{
+    bottom: -4px;
+    right: 10%;
+}
+.btn-startnow:hover::before{
+    left: 80%;
+}
+.btn-startnow:hover::after{
+    right: 80%;
+}
+
+
+
+
+
+
+
+
+.btn-avail{
+   
+      width: 150px;
+      height: 45px;
+      color: #3498db;
+      border: 2.5px solid;
+      background: none;
+      text-transform: uppercase;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 12px;
+      position: relative;
+      margin-left: 1100px;
+      top: 30px;
+}
+.btn-avail::before,.btn-avail::after{
+     content: '';
+     position: absolute;
+     width: 14px;
+     height: 4px;
+     background: white;
+     transform: skewX(50deg);
+     transition: .4s linear;
+}
+.btn-avail::before{
+    top: -4px;
+    left: 10%;
+
+
+}
+.btn-avail::after{
+    bottom: -4px;
+    right: 10%;
+}
+.btn-avail:hover::before{
+    left: 80%;
+}
+.btn-avail:hover::after{
+    right: 80%;
+}
+
+
+
+
+.usera h1{
+    font-size: 20px;
+    margin-left: 200px;
+}
+.usere h1{
+    font-size: 20px;
+    margin-left: 200px;
+}

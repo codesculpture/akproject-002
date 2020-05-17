@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available-Webinars WC</title>
+    <script src="https:ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ 
+      <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+       <link rel="stylesheet" href="/public/css/avail-web.css">
+      <link rel="stylesheet" href="https:fonts.googleapis.com/css2?family=Jost:wght@500&display=swap">
+      <link rel="shortcut icon" href="/public/img/favicon-webinar.png" type="image/x-icon">
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https:maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script src="/socket.io/socket.io.js"></script>
+      <script src="/dist/RTCMultiConnection.min.js"></script>
+</head>
+<body>
+    <h2 style="margin-left: 10px; margin-top: 10px;"> Available-Webinars</h2>
+    <button class="btn-dashb">Dashboard</button>
+    <div class="sinas">Signed as:<small><strong id="show-email"></strong></small></div>
+    <table class="table">
+        <thead>
+            <th>Webinar ID</th>
+            <th>Hoster</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Category</th>
+            <th>Add</th>
+        </thead>
+        <tbody id="all_webinars">
+
+        </tbody>
+    </table>
+    <div class="modal fade" id="joinRoomModel" tabindex="-1" role="dialog" aria-labelledby="joinRoomModelLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="joinRoomModelLabel">Add To My Dashboard</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="form-group">
+          <p>
+            <label for="txt-roomid-hidden"  class="col-form-label"> Room ID:</label>
+            <input type="text" class="form-control" value="" disabled id="txt-roomid-hidden">
+          </p>
+
+          <p>
+            <label for="txt-user-name-hidden" class="col-form-label">Enter Your Name:</label>
+            <input type="text" class="form-control" id="txt-user-name-hidden">
+          </p>
+          
+          
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn" data-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-primary" id="btn-join-hidden-room">Join</button>
+    </div>
+  </div>
+</div>
+</div>
+    
+    <script src="https:www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+  
+    <script src="https:www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https:www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+    
+    <script src="https:www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script>
+     <script src="/public/js/Avail_web.js"></script>
+</body>
+</html>

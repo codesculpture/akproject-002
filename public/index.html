@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/css/index.css">
+    <link rel="stylesheet" href="/public/css/loader.css">
+  
+   
+    
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webinarclaps</title>
+    <link rel="shortcut icon" type="image/png" href="/public/img/favicon-webinar.png"/>
+</head>
+<body>
+  <div class="loader">
+    <h1>Please Wait.... Loading</h1>
+  </div>
+  <img src="/public/img/webinarclap_100.png" alt="webinarclaps-best webinar" style="position: absolute; margin-top: -12.5%;margin-left: 0.5%; height:60px;width:130px;">  
+
+    <div class="tabs">
+
+<h1 class="title">
+    <span style="color: white">Creativity is</span></br>
+    <span style="color: white;">Just Connecting</span></br>
+    <span style="color: white;">Things</span></br>
+  </h1>
+  
+  <h2 class="title" style="margin-top: 30px;">
+    <span style=" color:yellow;">We Do That</span>
+    
+    
+  </h2>
+    <ul id="reg-log" class="nav nav-tabs" id="myTab" role="tablist">
+        
+      <li class="nav-item">
+          <a class="nav-link active" id="reg-tab" data-toggle="tab" href="#reg" role="tab" aria-controls="reg" aria-selected="true">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="log-tab" data-toggle="tab" href="#log" role="tab" aria-controls="log" aria-selected="false">Login</a>
+        </li>
+     
+      </ul>
+      <div style = "width: 50%; display:block; text-align: center; margin: auto;" class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="reg" role="tabpanel" aria-labelledby="reg-tab">
+            <form class="reg-form">
+                <h1>Register</h1> 
+                <div class="form-group">
+                  
+
+                  <input onblur="auth_page.checkruname()" required type="name" class="" id="runame" aria-describedby="runamehelp">
+                  <span data-placeholder="UserName"></span>
+                  
+                </div>
+                <div class="form-group">
+                  
+                  <input type="email" class="" required id="remail" onblur="auth_page.checkremail()" aria-describedby="emailHelp">
+                  <span data-placeholder="Email"></span>
+                 
+                </div>
+
+                <div class="form-group">
+                  
+                  <input onblur="auth_page.checkrpwd()" required type="password" class="" id="rpwd">
+                  <span data-placeholder="Password"></span>
+                
+                </div>
+                
+                <button type="button" onclick="auth_page.signup()" class="btn-reg">Register</button>
+            </form>
+            
+
+        </div>
+        <div class="tab-pane fade" id="log" role="tabpanel" aria-labelledby="log-tab"> 
+            <form class="log-form">
+                <h1>Login</h1>
+            <div class="form-group">
+              
+              <input onblur="auth_page.checklemail()" required type="email" class="" id="lemail" aria-describedby="emailHelp">
+              <span data-placeholder="Email"></span>
+              
+            </div>
+            <div class="form-group">
+              
+              <input onblur="auth_page.checklpwd()" required type="password" id="lpwd">
+              <span data-placeholder="Password"></span>
+             
+            </div>
+            
+          
+          <button type="button" id="btn-login" onclick="auth_page.signin()" class="btn-reg">Login</button></div> 
+          </form>
+        </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+     
+      <!-- Firebase -->
+      
+  
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+  
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+  
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script>
+  <script src="./js/app.js"></script>
+  <script src="./js/Auth.js"></script>
+ 
+  <footer>
+    <p style="text-align:center;margin-top:20px;">&copy copyright Luvipaatt&reg 2020</p>
+  </footer>
+</body>
+
+</html>

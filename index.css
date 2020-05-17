@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import 'https://fonts.googleapis.com/css?family=Baloo+Paaji';
+*{
+    margin:0;
+    padding: 0;
+    text-decoration: none;
+  
+    box-sizing: border-box;
+    max-width: 100%;
+    
+}
+
+body{
+    min-width: 100%;
+    
+    background-color:#1e90ff;
+    background:linear-gradient(#1e90ff, #5eaaf5)
+    
+
+}
+.log-form{
+    width: 300px;
+    background: #f1f1f1;
+    height: 405px;
+    padding: 40px 40px;
+    border-radius: 10px;
+    position: absolute;
+    left: 75%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    
+}
+.log-form h1{
+    margin-bottom: 10%;
+    font-size: 25px;
+}
+.reg-form h1{
+    margin-bottom: 10%;
+    font-size: 25px;
+}
+.reg-form{
+    width: 300px;
+    background: #f1f1f1;
+    height: 410px;
+    padding: 40px 40px;
+    border-radius: 10px;
+    position: absolute;
+    left: 75%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+}
+
+.form-group{
+    border-bottom: 2px solid #adadad;
+    position: relative;
+    margin: 30px 0;
+}
+.form-group input{
+    font-size: 15px;
+    color: #333;
+    border: none;
+    width:100%;
+    outline: none;
+    background: none;
+    padding: 0 5px;
+    height: 40px;
+}
+.form-group span::before{
+    content: attr(data-placeholder);
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    z-index: -1;
+    transition: .5s;
+
+}
+.form-group span::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-image: linear-gradient(120deg,#ecf0f1,#3498db);
+    left: 0;
+    bottom: -2px;
+    transition: .5s;
+}
+.focus + span::before{
+    top: -5px;
+
+}
+.focus + span::after{
+    width: 100%;
+    bottom: -2px;
+    left: 0;
+
+}
+
+#reg-log{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+
+    
+    
+}
+#reg-log li{
+    list-style: none;
+    display: inline-block;
+    padding: 40px 20px;
+   
+
+}
+#reg-log li a{
+    text-decoration: none;
+    position: relative;
+    color: #313131;
+   
+    font-size: 20px;
+    font-weight: 700;
+    right: -862px;
+    margin-top: -455px;
+
+
+    overflow: hidden;
+    transition: 0.7s all;
+    padding: 14px 20px; 
+}
+#reg-log li a::before{
+    content: '';
+    width: 60px;
+    position: absolute;
+    border-bottom: 4px solid #313131;
+    bottom: 0;
+    right:400px;
+    transition: 0.7s;
+}
+#reg-log li a:hover::before{
+    right: 0;
+}
+#reg-log li a.active{
+    
+    background-color: #FF82B9;
+    border: 0px;
+}
+
+.title{
+  font-family: 'Baloo Paaji', cursive;
+  text-transform: uppercase;
+  font-size: 55px;
+
+  margin-left: 150px;
+  margin-top: 180px;
+  
+
+}
+.h2-title{
+    padding: 0px;
+    margin-right: 20%;
+}
+
+
+
+
+
+
+.btn-reg{
+   
+    width: 150px;
+    height: 45px;
+    color: #17a2b8;
+    border: 2.5px solid;
+    background: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 00;
+    position: relative;
+}
+.btn-reg::before,.btn-reg::after{
+   content: '';
+   position: absolute;
+   width: 12px;
+   height: 4px;
+   background: white;
+   transform: skewX(50deg);
+   transition: .4s linear;
+}
+.btn-reg::before{
+  top: -4px;
+  left: 10%;
+
+
+}
+.btn-reg::after{
+  bottom: -4px;
+  right: 10%;
+}
+.btn-reg:hover::before{
+  left: 80%;
+}
+.btn-reg:hover::after{
+  right: 80%;
+}
+
+.loader{
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background: #1e90ff;
+    color: white;
+}
+.loader.hidden{
+    animation: fadeOut 1s;
+    animation-fill-mode: forwards;
+}
+.loader > img{
+    width: 100px;
+}
+@keyframes fadeOut{
+   100%{
+       opacity: 0;
+       visibility: hidden;
+   }
+}
