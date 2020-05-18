@@ -1,5 +1,8 @@
  //Firebase Configs
  var firebase = app_firebase;
+
+
+ 
  window.addEventListener("load", function(){
   const loader = document.querySelector(".loader");
   loader.className += " hidden";
