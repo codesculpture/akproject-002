@@ -748,7 +748,7 @@ $('#btn-share-screen').click(function() {
     }
 
     $('#btn-share-screen').hide();
-
+      screen_constraints = {screen:true};
     if(navigator.mediaDevices.getDisplayMedia) {
         navigator.mediaDevices.getDisplayMedia(screen_constraints).then(stream => {
             replaceScreenTrack(stream);
