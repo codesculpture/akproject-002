@@ -57,6 +57,7 @@ else if(remailValid == null){
       var errorCode = error.code;
       var errorMessage = error.message;
       alert(errorMessage);
+      $('#btn-reg').html('Register').prop('disabled', false);
   });
 }
 }
@@ -85,6 +86,8 @@ function signin(){
             var errorCode = error.code;
             var errorMessage = error.message;
             alert(errorMessage);
+            
+            $('#btn-login').html('Login').prop('disabled', false);
         });
     }
    
@@ -93,7 +96,7 @@ function signin(){
   var uid = null;
     firebase.auth().onAuthStateChanged(function(user){
         if(user){
-            
+            alert("You Are Already Logged In")
             window.location.replace("./User.html");   
         }
         else{

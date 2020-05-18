@@ -7,7 +7,7 @@
 
       var connection = new RTCMultiConnection();
      
-      connection.socketURL = 'http://192.168.43.22:5000/';
+      connection.socketURL = 'https://project2-test-001.herokuapp.com/';
       // connection.socketURL = 'https://rtcmulticonnection.herokuapp.com:443/';
       
       /// make this room public
@@ -142,7 +142,7 @@
               
               
           $('#startRoomModel').modal('hide');
-          var href = 'http://192.168.43.22:5000/public/concall.html?open=' + connection.isInitiator + '&sessionid=' + connection.sessionid + '&publicRoomIdentifier=' + connection.publicRoomIdentifier + '&userFullName=' + connection.extra.userFullName;
+          var href = 'https://project2-test-001.herokuapp.com/public/concall.html?open=' + connection.isInitiator + '&sessionid=' + connection.sessionid + '&publicRoomIdentifier=' + connection.publicRoomIdentifier + '&userFullName=' + connection.extra.userFullName;
           
           
           //Variables For Pushing To Firebase DB
@@ -521,7 +521,8 @@ if (!newWin || newWin.closed || typeof newWin.closed == 'undefined') {
         else{
             
          uid = null;
-            window.location.replace("http://192.168.43.22:5000/public/index.html");
+         alert("You Are Not Logged In. Please Log In");
+            window.location.replace("https://project2-test-001.herokuapp.com/public/index.html");
         }
     });
     function signout(){

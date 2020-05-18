@@ -56,7 +56,7 @@
         <div class="tab-content" id="pills-tabContent">
           <div class="tab-pane fade show active usera" id="pills-asuserattended" role="tabpanel" aria-labelledby="pills-asuserattended-tab">
        <!--attended Tab Content-->
-       <h1>Attended</h1>
+       <h1>Attended Webinars</h1>
        <table class="table">
          <thead>
            <tr>
@@ -74,7 +74,7 @@
           </div>
           <div class="tab-pane fade usere" id="pills-asuserenrolled" role="tabpanel" aria-labelledby="pills-asuserenrolled-tab">
             <!--Enrolled Tab Content-->
-             <h1>Enrolled</h1>
+             <h1>Enrolled Webinars</h1>
              <table class="table">
               <thead>
                 <tr>
@@ -109,6 +109,11 @@
           </li>
           
         </ul>
+        <div style="float: right;margin-top: 20px; ">
+          <button class="btn-crte" id="db-crte" data-toggle="modal" data-target="#startRoomModel">Create Webinar</button>
+          
+          
+        </div>
         <div class="tab-content" id="pills-tabContent">
           <div class="tab-pane fade show active" id="pills-ashost-previous" role="tabpanel" aria-labelledby="pills-ashost-previous-tab">
             <h5 style="margin-left: 15%; margin-top: 30px;"> Past Meeting</h5>
@@ -149,11 +154,7 @@
 
           </div>
           </div>
-          <div style="float: right;margin-top: 20px; ">
-            <button class="btn-crte" id="db-crte" data-toggle="modal" data-target="#startRoomModel">Create Webinar</button>
-            
-            
-          </div>
+         
         
           
 
@@ -170,7 +171,7 @@
       <form id="create-form">
         <div class="form-group">
           <p>
-            <label for="txt-roomid" class="col-form-label">Room ID(Random):</label>
+            <label for="txt-roomid" class="col-form-label">Webinar Id(Random):</label>
             <input type="text" name="roomid" value="" disabled  class="form-control" id="txt-roomid">
           </p>
 

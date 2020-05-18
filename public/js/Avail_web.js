@@ -110,7 +110,7 @@
           connection.sessionid = join_roomid;
           console.log(join_roomid+' '+join_roomuname+' '+join_cat)
           connection.extra.userFullName = join_roomuname;
-     var join_url = 'http://192.168.43.22:5000/public/concall.html?open=' + connection.isInitiator + '&sessionid=' + connection.sessionid + '&publicRoomIdentifier=' + connection.publicRoomIdentifier + '&userFullName=' + connection.extra.userFullName;
+     var join_url = 'https://project2-test-001.herokuapp.com/public/concall.html?open=' + connection.isInitiator + '&sessionid=' + connection.sessionid + '&publicRoomIdentifier=' + connection.publicRoomIdentifier + '&userFullName=' + connection.extra.userFullName;
               var join_creds = {
                 roomid: join_roomid,
                 roomuname: join_roomuname,
@@ -127,7 +127,7 @@
               
       
               
-               window.location.replace("http://192.168.43.70:5000/public/User.html") 
+               window.location.replace("https://project2-test-001.herokuapp.com/public/User.html") 
               
               })
           
@@ -148,13 +148,14 @@
         else{
             
             uid = null;
-            window.location.replace("http://192.168.43.22:5000/public/index.html");
+            alert("You Are Not Logged In. Please Log In")
+            window.location.replace("https://project2-test-001.herokuapp.com/public/index.html");
         }
 
     });
     //Our Server Functions On
            var connection = new RTCMultiConnection();
-         connection.socketURL = 'http://192.168.43.22:5000/';
+         connection.socketURL = 'https://project2-test-001.herokuapp.com/';
 
  $('#dashb').click(function(){
    window.location.replace("./User.html");
