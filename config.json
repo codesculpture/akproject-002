@@ -1,5 +1,5 @@
 {
-  "socketURL": "http://192.168.43.22:5000//",
+  "socketURL": "http://192.168.43.22:5000/",
   "dirPath": "",
   "homePage": "/public/index.html",
   "socketMessageEvent": "RTCMultiConnection-Message",
