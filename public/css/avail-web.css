@@ -85,17 +85,17 @@ body{
 }
 
 .btn-dashb{
-    width: 150px;
-    height: 45px;
+    width: 120px;
+    height: 35px;
     color: #3498db;
-    top: 400px;
-   
-      border: 2px solid;
+    
+   margin-left: 162px;
+      border: 3px solid;
       background: none;
       text-transform: uppercase;
       cursor: pointer;
-      font-size: 12px;
-      font-weight: 600;
+      font-size: 11px;
+      font-weight: 500;
       position: relative;
 }
 .btn-dashb::before,.btn-dashb::after{

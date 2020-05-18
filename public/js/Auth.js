@@ -3,50 +3,11 @@ var auth_page = {};
    var firebase = app_firebase;
 
 // xxxxxxxxxx User Surname Validation xxxxxxxxxx
-function checkruname(){
-  var rusername = document.getElementById("runame").value;
-  var flag = false;
-  if(rusername === ""){
-      flag = true;
-  }
-  if(flag){
-      document.getElementById("runameerror").style.display = "block";
-  }else{
-      document.getElementById("runameerror").style.display = "none";
-  }
-}
+
 // xxxxxxxxxx Email Validation xxxxxxxxxx
-function checkremail(){
-  var remail = document.getElementById("remail");
-  var remailformate = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  var flag;
-  if(remail.value.match(remailformate)){
-      flag = false;
-  }else{
-      flag = true;
-  }
-  if(flag){
-      document.getElementById("remailerror").style.display = "block";
-  }else{
-      document.getElementById("remailerror").style.display = "none";
-  }
-}
+
 // xxxxxxxxxx Password Validation xxxxxxxxxx
-function checkrpwd(){
-  var rpwd = document.getElementById("rpwd");
-  var rpwdformate = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}/;      
-  var flag;
-  if(rpwd.value.match(rpwdformate)){
-      flag = false;
-  }else{
-      flag = true;
-  }    
-  if(flag){
-      document.getElementById("rpwderror").style.display = "block";
-  }else{
-      document.getElementById("rpwderror").style.display = "none";
-  }
-}
+
 
 
 function signup(){
@@ -67,15 +28,17 @@ function signup(){
 
   
   if(runameValid == null){
-    return checkruname();
+    return alert("Please Enter Valid Name");
 }
 else if(remailValid == null){
-    return checkremail();
+    return  alert("Please Enter Valid Email");
 }else if(rpwdValid == null){
-    return checkrpwd();
+    return alert("Password need atleast one uppercase");
 }else{
+    $('#btn-reg').html('Please wait...').prop('disabled', true);
     firebase.auth().createUserWithEmailAndPassword(remail, rpwd).then(function (user){ 
         var user = firebase.auth().currentUser;
+        
         var uid;
         if (user != null) {
             uid = user.uid;
@@ -87,12 +50,8 @@ else if(remailValid == null){
         }
       
       firebaseRef.child('users/'+uid +'/profile').set(userData);
-      alert('Your Account Created','Your account was created successfully, you can log in now.',
-      ).then((value) => {
-          setTimeout(function(){
-              window.location.replace("./User.html");
-          }, 1000)
-      });
+      alert('Your Account Created','Your account was created successfully, you can log in now.',)
+      window.location.replace("./User.html");
   }).catch((error) => {
       // Handle Errors here.
       var errorCode = error.code;
@@ -109,14 +68,15 @@ function signin(){
 
     var lemailValid = lemail.match(lemailformate);
     var lpwdValid = lpwd.match(lpwdformate);
-
+     
     if(lemailValid== null){
-        return checklemail();
+        return alert("Please Enter Valid Email");
     }else if(lpwdValid == null){
-        return checklpwd();
+        return alert("Password need atleast one uppercase");
     }else{
+        $('#btn-login').html('Please wait...').prop('disabled', true);
         firebase.auth().signInWithEmailAndPassword(lemail, lpwd).then(function(user) {
-            $('#btn-login').html('Please wait...').prop('disabled', true);
+            
             alert("Succesfully Signed In");
 
             window.location.replace("./User.html");
@@ -129,36 +89,7 @@ function signin(){
     }
    
 }
-function checklemail(){
-    var lemail = document.getElementById("lemail");
-    var lemailformate = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    var flag;
-    if(lemail.value.match(lemailformate)){
-        flag = false;
-    }else{
-        flag = true;
-    }
-    if(flag){
-        document.getElementById("lemailerror").style.display = "block";
-    }else{
-        document.getElementById("lemailerror").style.display = "none";
-    }
-  }
-  function checklpwd(){
-    var lpwd = document.getElementById("lpwd");
-    var lpwdformate = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}/;      
-    var flag;
-    if(lpwd.value.match(lpwdformate)){
-        flag = false;
-    }else{
-        flag = true;
-    }    
-    if(flag){
-        document.getElementById("lpwderror").style.display = "block";
-    }else{
-        document.getElementById("lpwderror").style.display = "none";
-    }
-  }
+
   var uid = null;
     firebase.auth().onAuthStateChanged(function(user){
         if(user){
@@ -180,11 +111,7 @@ function checklemail(){
         if ($(this).val() == "") 
         $(this).removeClass("focus")
       })
-       auth_page.checklemail = checklemail;
-       auth_page.checklpwd = checklpwd;
-       auth_page.checkrpwd = checkrpwd;
-       auth_page.checkremail = checkremail;
-       auth_page.checkruname = checkruname;
+      
        auth_page.signin = signin;
        auth_page.signup = signup;
 
