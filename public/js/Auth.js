@@ -19,8 +19,7 @@ function signup(){
 
   var runameformate = /^([A-Za-z.\s_-])/;    
   var remailformate = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  var rpwdformate = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}/;
-
+  var rpwdformate = /^[A-Za-z]\w{4,14}$/;
   var runameValid = runame.match(runameformate);
   var remailValid = remail.match(remailformate);
   var rpwdValid = rpwd.match(rpwdformate);
@@ -33,7 +32,7 @@ function signup(){
 else if(remailValid == null){
     return  alert("Please Enter Valid Email");
 }else if(rpwdValid == null){
-    return alert("Password need atleast one uppercase");
+    return alert("Password need atleast 4 letters");
 }else{
     $('#btn-reg').html('Please wait...').prop('disabled', true);
     firebase.auth().createUserWithEmailAndPassword(remail, rpwd).then(function (user){ 
@@ -65,7 +64,7 @@ function signin(){
     var lemail = document.getElementById("lemail").value;
     var lpwd = document.getElementById("lpwd").value;
     var lemailformate = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    var lpwdformate = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}/;      
+    var lpwdformate =  /^[A-Za-z]\w{4,14}$/;     
 
     var lemailValid = lemail.match(lemailformate);
     var lpwdValid = lpwd.match(lpwdformate);
@@ -73,8 +72,7 @@ function signin(){
     if(lemailValid== null){
         return alert("Please Enter Valid Email");
     }else if(lpwdValid == null){
-        return alert("Password need atleast one uppercase");
-    }else{
+        return alert("Password need atleast 4 letters");
         $('#btn-login').html('Please wait...').prop('disabled', true);
         firebase.auth().signInWithEmailAndPassword(lemail, lpwd).then(function(user) {
             
