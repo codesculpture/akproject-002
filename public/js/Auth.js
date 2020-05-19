@@ -73,6 +73,8 @@ function signin(){
         return alert("Please Enter Valid Email");
     }else if(lpwdValid == null){
         return alert("Password need atleast 4 letters");
+    }
+       else{
         $('#btn-login').html('Please wait...').prop('disabled', true);
         firebase.auth().signInWithEmailAndPassword(lemail, lpwd).then(function(user) {
             
