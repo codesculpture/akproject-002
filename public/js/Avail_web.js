@@ -113,8 +113,8 @@
           connection.sessionid = join_roomid;
           console.log(join_roomid+' '+join_roomuname+' '+join_cat)
           connection.extra.userFullName = join_roomuname;
-     var join_url = 'https://project2-test-001.herokuapp.com/public/concall.html?open=' + connection.isInitiator + '&sessionid=' + connection.sessionid + '&publicRoomIdentifier=' + connection.publicRoomIdentifier + '&userFullName=' + connection.extra.userFullName;
-              var join_creds = {
+             var join_url = 'https://project2-test-001.herokuapp.com/public/concall.html?open=' + connection.isInitiator + '&sessionid=' + connection.sessionid + '&publicRoomIdentifier=' + connection.publicRoomIdentifier + '&userFullName=' + connection.extra.userFullName;
+                  var join_creds = {
                 roomid: join_roomid,
                 roomuname: join_roomuname,
                 URL: join_url,
