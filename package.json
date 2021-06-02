@@ -24,7 +24,7 @@
     "socket.io": "latest",
     "uuid": "^8.0.0",
     "webrtc-adapter": "latest",
-     "grunt": "0.4.5",
+    "grunt": "0.4.5",
     "grunt-bump": "0.7.0",
     "grunt-cli": "0.1.13",
     "grunt-contrib-clean": "0.6.0",
@@ -36,5 +36,4 @@
     "grunt-replace": "0.11.0",
     "load-grunt-tasks": "3.4.0"
   }
-  
 }
