@@ -21,7 +21,7 @@
     "multistreamsmixer": "latest",
     "recordrtc": "latest",
     "rtcmulticonnection-server": "latest",
-    "socket.io": "latest",
+    "socket.io": "*",
     "uuid": "^8.0.0",
     "webrtc-adapter": "latest",
     "grunt": "0.4.5",
