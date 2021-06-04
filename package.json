@@ -5,7 +5,8 @@
   "main": "./dist/RTCMultiConnection.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server"
+    "dev": "nodemon server",
+    "heroku-prebuild": "npm install"
   },
   "author": "Karthick,Aravind",
   "license": "ISC",
